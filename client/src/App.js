@@ -1,14 +1,20 @@
-import { Route, Router } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
-import Map from "./components/Map";
+import { ChakraProvider, Switch } from "@chakra-ui/react";
+import LandingPageUser from "./pages/user/LandingPageUser";
+
 
 function App() {
   return (
     <>
-      <Router>
-        <Route  path="/" component={Login} />
-        <Route  path="/map" component={Map} />
-      </Router>
+      <ChakraProvider>
+        <Routes>
+
+          <Route path="/login" element={<Login />} />
+          <Route path="/" element={<LandingPageUser />} />
+
+        </Routes>
+      </ChakraProvider>
     </>
   );
 }
