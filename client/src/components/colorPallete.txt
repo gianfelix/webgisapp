@@ -1,0 +1,6 @@
+color1: #E2F0F9
+color2: #B0DDE4
+color3: #286FB4
+color4: #FFFFFF
+color5: #DF4C73
+color6: #DF4C25

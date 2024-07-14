@@ -5,7 +5,7 @@ const authController = require("../controllers/authControllers");
 
 router.post("/login", authController.login);
 router.post("/",  authController.register);
-router.patch("/", verifyToken, authController.updateRegister);
+router.patch("/",  authController.verify);
 router.get("/role", authController.getAllRoles)
 router.get("/", authController.getAllUsers)
 

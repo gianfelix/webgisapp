@@ -16,6 +16,15 @@ import {
 } from "@chakra-ui/react";
 import axios from "axios";
 
+const colors = {
+  color1: "#E2F0F9",
+  color2: "#B0DDE4",
+  color3: "#286FB4",
+  color4: "#FFFFFF",
+  color5: "#DF4C73",
+  color6: "#DF4C25",
+};
+
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -43,7 +52,7 @@ const Login = () => {
 
         setTimeout(() => {
           window.location.href = "/";
-        }, 3000);
+        }, 1000);
       } else {
         toast({
           title: "Login Failed.",
@@ -65,79 +74,100 @@ const Login = () => {
   };
 
   return (
-    <Box minH="100vh" bgGradient="linear(to-r, teal.500, blue.600)">
+    <Box
+      minH="100vh"
+      bgGradient={`linear(to-r, ${colors.color2}, ${colors.color3})`}
+    >
       <Flex height="100vh" alignItems="center" justifyContent="center">
-        <Flex width="70%" boxShadow="2xl" rounded="lg" bg="white">
-          <Box w="60%" pt={10} px={16}>
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          width="90%"
+          maxWidth="1000px"
+          boxShadow="2xl"
+          rounded="lg"
+          bg={colors.color4}
+          overflow="hidden"
+        >
+          <Box w={{ base: "100%", md: "70%" }} p={10}>
             <Heading
+              pt={10}
               as="h2"
               size="xl"
               mb={6}
               textAlign="center"
-              color="teal.500"
+              color={colors.color3}
             >
               Login
             </Heading>
             <VStack spacing={4} align="flex-start">
               <FormControl id="username" isRequired>
-                <FormLabel>Username</FormLabel>
+                <FormLabel color={colors.color3}>Username</FormLabel>
                 <Input
+                  color={colors.color3}
+                  borderWidth="1px"
+                  borderColor={colors.color2}
                   type="text"
                   value={username}
                   onChange={(e) => setUsername(e.target.value)}
                   placeholder="Enter your username"
-                  focusBorderColor="teal.500"
+                  focusBorderColor={colors.color3}
+                  _placeholder={{ color: colors.color2 }}
+                  _hover={{ borderColor: colors.color3 }}
                 />
               </FormControl>
               <FormControl id="password" isRequired>
-                <FormLabel>Password</FormLabel>
+                <FormLabel color={colors.color3}>Password</FormLabel>
                 <Input
+                  color={colors.color3}
+                  borderWidth="1px"
+                  borderColor={colors.color2}
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="Enter your password"
-                  focusBorderColor="teal.500"
+                  focusBorderColor={colors.color3}
+                  _placeholder={{ color: colors.color2 }}
+                  _hover={{ borderColor: colors.color3 }}
                 />
               </FormControl>
               <Button
-                bgGradient="linear(to-r, teal.500, blue.600)
-                "
+                bg={colors.color5}
                 width="full"
                 onClick={handleLogin}
                 size="lg"
+                _hover={{ bg: colors.color6 }}
               >
-                <Text color="white" fontWeight="bold">
+                <Text color={colors.color4} fontWeight="bold">
                   Login
                 </Text>
               </Button>
               <HStack justify="space-between" width="full">
-                <Link color="teal.500" href="/forgot-password">
+                <Link color={colors.color3} href="/forgot-password">
                   Forgot password?
                 </Link>
-                <Link color="teal.500" href="/register">
+                <Link color={colors.color3} href="/register">
                   Create account
                 </Link>
               </HStack>
             </VStack>
           </Box>
           <Box
-            w="40%"
+            w={{ base: "100%", md: "30%" }}
             display="flex"
             alignItems="center"
             justifyContent="center"
-            bg="teal.50"
-            roundedRight="lg"
-            overflow="hidden"
+            bg={colors.color1}
+            roundedRight={{ md: "lg" }}
           >
             <Image
-              src="https://cdn.pixabay.com/photo/2023/09/22/07/02/red-8268266_640.jpg"
-              // maxHeight={"10%"}
+              src="https://images.unsplash.com/photo-1523539693385-e5e891eb4465?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGluZG9uZXNpYXxlbnwwfHwwfHx8MA%3D%3D"
               alt="Login Image"
-              // boxSize="90%"
               objectFit="cover"
               borderRadius="lg"
               boxShadow="xl"
               mx="auto"
+              maxH="400px"
+              maxW="100%"
             />
           </Box>
         </Flex>
