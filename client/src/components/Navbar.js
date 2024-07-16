@@ -43,10 +43,22 @@ const Navbar = () => {
         alignItems="center"
         p={4}
         px={5}
+        boxShadow={"0px 4px 4px rgba(0, 0, 0, 0.25)"}
+        zIndex={1000000}
       >
         <Box>
           <Link href="/" color="#DF4C25">
             Home
+          </Link>
+        </Box>
+        <Box>
+          <Link href="/about" color="#DF4C25">
+            About Us
+          </Link>
+        </Box>
+        <Box>
+          <Link href="/report" color="#DF4C25">
+            Report a Disaster
           </Link>
         </Box>
         <Box>

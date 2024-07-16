@@ -9,6 +9,9 @@ import VerificationPage from "./pages/user/VerificationPage";
 import NavbarNotLogin from "./components/NavbarNotLogin";
 import WebGISPage from "./pages/user/WebGISPage";
 import ProtectedRoute from "./components/ProtectedRoute";
+import EditProfie from "./pages/user/EditProfile";
+import About from "./pages/user/About";
+import Report from "./pages/user/Report";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -35,6 +38,9 @@ function App() {
           <Route element={<ProtectedRoute isLoggedIn={isLoggedIn} />}>
             <Route path="/webGIS" element={<WebGISPage />} />
           </Route>
+          <Route path="/profile" element={<EditProfie />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/report" element={<Report />} />
         </Routes>
       </Box>
     </ChakraProvider>

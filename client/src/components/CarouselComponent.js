@@ -14,7 +14,10 @@ const CarouselComponent = () => {
           height="600"
           objectFit="cover"
         />
-        <p className="legend">Slide 1</p>
+        <p className="legend">
+          {/* Diskusi terkait program pemetaan batas desa */}
+          Discuss about the project for the development of the map
+        </p>
       </Box>
       <Box>
         <Image
@@ -24,7 +27,10 @@ const CarouselComponent = () => {
           height="600"
           objectFit="cover"
         />
-        <p className="legend">Slide 2</p>
+        <p className="legend">
+          {/* pelatihan web coding */}
+          Provide training for web coding
+        </p>
       </Box>
       <Box>
         <Image
@@ -34,7 +40,10 @@ const CarouselComponent = () => {
           height="600"
           objectFit="cover"
         />
-        <p className="legend">Slide 3</p>
+        <p className="legend">
+          {/* Pelatihan drone */}
+          Provide training for drone mapping
+        </p>
       </Box>
       <Box>
         <Image
@@ -44,7 +53,10 @@ const CarouselComponent = () => {
           height="600"
           objectFit="cover"
         />
-        <p className="legend">Slide 4</p>
+        <p className="legend">
+          {/* analisis data penginderaan jauh */}
+          Provide training for data analysis
+        </p>
       </Box>
     </Carousel>
   );

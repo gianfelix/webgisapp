@@ -61,10 +61,31 @@ const LandingPageUser = () => {
             Explore Our Content
           </Heading>
           <Text fontSize="lg">
-            Here you can add more detailed information about your content,
-            features, or anything else you'd like to share with your users.
+            Here are some of our most popular content:
+            <ul>
+              <li>Content 1</li>
+              <li>Content 2</li>
+              <li>Content 3</li>
+            </ul>
           </Text>
-          {/* Add more content or components as needed */}
+        </VStack>
+      </Box>
+      <Box
+        bg="#033c6e"
+        minHeight="100vh"
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+        p={4}
+      >
+        <VStack spacing={6} textAlign="center" maxWidth="800px">
+          <Heading as="h2" size="xl" fontWeight="bold" color="white">
+            Join Our Community
+          </Heading>
+          <Text fontSize="lg" color="white">
+            Join our community of like-minded individuals and share your
+            thoughts, experiences, and perspectives.
+          </Text>
         </VStack>
       </Box>
     </>
